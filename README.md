@@ -1,5 +1,8 @@
 # gi
 
+
+2022/4/14
+
 # This repository is about me tring to understand react. 
 ## So its time I get my hands dirty with it.   Will be overhauling some old code and hopefully React makes thngs easier. I'll be the judge.  
 
@@ -14,5 +17,3 @@ Main Site functionaly will consist of the following functionalities.
 
 I hope it is not too much of a heach ache.
 
-
-2022/4/14
