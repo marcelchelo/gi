@@ -1,10 +1,11 @@
 const express = require("express");
+require('dotenv').config()
 const { reset } = require("nodemon");
 const app = express();
 const { Sequelize } = require('sequelize');
 
 
-  const sequelize = new Sequelize('Running', 'root', 'imagine', {
+  const sequelize = new Sequelize('Running', 'root', {password : process.env.DB_PASSWORD}, {
     host: 'localhost',
     dialect: 'mysql' 
   });
