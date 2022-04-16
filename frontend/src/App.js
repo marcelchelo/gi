@@ -4,17 +4,22 @@ import './App.css';
 import Nav from './components/Nav'
 import {BrowserRouter as Router} from 'react-router-dom'
 import React from 'react';
-// import Data from './components/Data';
-import axios from 'axios';
+import About from './components/About'
+
+ import Axios from 'axios';
 
 function App() {
 
-  const helloFromApi = 
-   axios
-      .get('/api')
-      .then(res => res.data);
+  Axios({
+    method: "GET",
+    url: "http://localhost:5000/api",
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(res => {
+    console.log(res.data.dbName + " this from frontend");
+  });
 
-  let data = helloFromApi.then();
 
   return (
     <Router>
@@ -23,14 +28,10 @@ function App() {
     <Nav />
       <header className="App-header">
       
-        <img className='App-picture'
-           src={mePic} alt="myFace"  >
-
-        </img>
+        <img className='App-picture'src={mePic} alt="myFace"  ></img>
         
-        <p>
-         -Trying to be better than yesterday
-        </p>
+        
+        <About/>
 
         
        
