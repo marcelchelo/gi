@@ -1,4 +1,4 @@
-import React from 'react'; // ES6 js
+import React from 'react'; 
 import {Link} from 'react-router-dom';
 import './Nav.css';
 
@@ -10,9 +10,12 @@ function Nav() {
             </button>
             <div id="navMainMenu" class="navbar-collapse collapse">
                 <div class="navbar-nav ml-auto">
-                    <Link to='/about' className="nav-item nav-link ">About</Link>
+                    <Link to='/test' className="nav-item nav-link ">About</Link>
                     <Link to='/blog' className="nav-item nav-link">Blog</Link>
                     <Link to='/runningStats' className="nav-item nav-link">Running</Link>
+                    <Link to='/express_backend' className="nav-item nav-link">Express Backend</Link>
+
+                    
 
                 </div>
             </div>

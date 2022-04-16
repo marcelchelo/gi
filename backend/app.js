@@ -2,16 +2,23 @@ const express = require("express");
 require('dotenv').config()
 const { reset } = require("nodemon");
 const app = express();
-const { Sequelize } = require('sequelize');
 
+
+var cors = require('cors')
+const port = process.env.PORT || 5000;
+
+
+const { Sequelize } = require('sequelize');
 
   const sequelize = new Sequelize('Running', 'root', {password : process.env.DB_PASSWORD}, {
     host: 'localhost',
     dialect: 'mysql' 
   });
   
+//sequelize test
 
-  app.get('/', function (req, res) {
+app.use (cors());
+  app.get('/api', function (req, res, next) {
     try {
       let dbName = sequelize.getDatabaseName();
       console.log(dbName);
@@ -22,16 +29,10 @@ const { Sequelize } = require('sequelize');
   })
 
 
+  //Test connection to React FrontEnd
+  app.get('/express_backend', (req, res) => { 
+    res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); 
+  });
 
-  // function  tryDB (){
-  //   try {
-  //     await sequelize.authenticate();
-  //     console.log('Connection has been established successfully.');
-  //   } catch (error) {
-  //     console.error('Unable to connect to the database:', error);
-  //   }
-
-  // }
   
-
-app.listen(5000);
+  app.listen(port, () => console.log(`Listening on port ${port}`)); 
