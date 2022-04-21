@@ -4,9 +4,7 @@ const { reset } = require("nodemon");
 const app = express();
 
 
-var cors = require('cors')   
-app.use (cors());
-
+var cors = require('cors')
 const port = process.env.PORT || 5000;
 
 
@@ -19,12 +17,12 @@ const { Sequelize } = require('sequelize');
   
 //sequelize test
 
-
+app.use (cors());
   app.get('/api', function (req, res, next) {
     try {
       let dbName = sequelize.getDatabaseName();
-      console.log(dbName + "This is from the backend. DB name using sequelize");
-      res.send({dbName:dbName});
+      console.log(dbName);
+      res.send(dbName);
     } catch (error) {
       console.log(error);
     }
@@ -32,8 +30,8 @@ const { Sequelize } = require('sequelize');
 
 
   //Test connection to React FrontEnd
-  app.get('/plzwork', (req, res) => { 
-    res.send({ message: 'We did iT!' }); 
+  app.get('/express_backend', (req, res) => { 
+    res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); 
   });
 
   

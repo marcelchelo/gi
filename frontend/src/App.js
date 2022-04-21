@@ -27,7 +27,7 @@ function App() {
     <Nav />
       <header className="App-header">
       
-        <img className='App-picture'src={mePic} alt="myFace"  ></img>
+      <img className='App-picture'src={mePic} alt="myFace"  ></img>
         
         
       <Route path="/about" exact component={About} />
@@ -39,7 +39,7 @@ function App() {
 
        
        
-      </header>
+    </header>
     </div>
     </Router>
   );
