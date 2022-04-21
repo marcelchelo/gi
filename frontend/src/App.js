@@ -4,22 +4,17 @@ import './App.css';
 import Nav from './components/Nav'
 import {BrowserRouter as Router} from 'react-router-dom'
 import React from 'react';
-import About from './components/About'
-
- import Axios from 'axios';
+// import Data from './components/Data';
+import axios from 'axios';
 
 function App() {
 
-  Axios({
-    method: "GET",
-    url: "http://localhost:5000/api",
-    headers: {
-      "Content-Type": "application/json"
-    }
-  }).then(res => {
-    console.log(res.data.dbName + " this from frontend");
-  });
+  const helloFromApi = 
+   axios
+      .get('/api')
+      .then(res => res.data);
 
+  let data = helloFromApi.then();
 
   return (
     <Router>
@@ -28,10 +23,18 @@ function App() {
     <Nav />
       <header className="App-header">
       
+<<<<<<< HEAD
       <img className='App-picture'src={mePic} alt="myFace"  ></img>
+=======
+        <img className='App-picture'
+           src={mePic} alt="myFace"  >
+
+        </img>
+>>>>>>> parent of 4fb4e13 (Axios connection from frontend to backend + Sequelize)
         
-        
-        <About/>
+        <p>
+         -Trying to be better than yesterday
+        </p>
 
         
        
