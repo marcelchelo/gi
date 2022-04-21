@@ -2,7 +2,7 @@
 import mePic from './profile.jpeg'
 import './App.css';
 import Nav from './components/Nav'
-import {BrowserRouter as Router , Switch ,Route} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 import React from 'react';
 import About from './components/About'
 
@@ -23,6 +23,7 @@ function App() {
 
   return (
     <Router>
+      
     <div className="App">
     <Nav />
       <header className="App-header">
@@ -30,7 +31,7 @@ function App() {
       <img className='App-picture'src={mePic} alt="myFace"  ></img>
         
         
-      <Route path="/about" exact component={About} />
+        <About/>
 
         
        
