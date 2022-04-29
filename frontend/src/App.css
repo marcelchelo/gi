@@ -4,22 +4,24 @@
 
 .App-picture {
   height: 40vmin;
-  border-radius: 50cm;
+  border-radius:50%;
   padding-top: 2rem ;
   padding-bottom: 2rem;
- 
+
 }
 
 
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 94vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: antiquewhite;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 

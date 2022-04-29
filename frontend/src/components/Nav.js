@@ -1,26 +1,31 @@
 import React from 'react'; 
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './Nav.css';
 
 function Nav() {
     return(
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark top">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMainMenu" aria-controls="navMainMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navMainMenu" class="navbar-collapse collapse">
-                <div class="navbar-nav ml-auto">
-                    <Link to='/test' className="nav-item nav-link ">About</Link>
-                    <Link to='/blog' className="nav-item nav-link">Blog</Link>
-                    <Link to='/runningStats' className="nav-item nav-link">Running</Link>
-                    <Link to='/express_backend' className="nav-item nav-link">Express Backend</Link>
-
+        <nav>
+            <h1>Marcelo-Villalba
+            </h1>
+            <ul className='navLinks'>
+                <li>
+                    <NavLink to="/about">About</NavLink>
+                </li>
+                <li>
+                     <NavLink to="/data">Data</NavLink>
+                </li>
+                <li>
+                     <NavLink to="/blog">Blog</NavLink>      
+                </li>
+                <li>
+                     <NavLink to="/projects">Projects</NavLink>
                     
-
-                </div>
-            </div>
+                </li>
+    
+            </ul>
         </nav>
     );
 }
+Nav.propTypes = {};
 
 export default Nav;

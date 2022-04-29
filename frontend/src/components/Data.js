@@ -1,20 +1,25 @@
-import Nav from './Nav'
+
 import React from 'react'; 
-import axios from "axios";
+//import axios from "axios";
 
 
 function Data() {
     
-    const fetchData = () => {
-        return axios.get("http://localhost:5000/api")
-              .then((response) => console.log(response.data));}
+    // const helloFromApi = 
+   
+    // axios
+    //   .get('/api')
+    //   .then(res => res.data);
+
+    //   console.log(helloFromApi.then.toString + "From fontend")
+  
 
 
     return(
        
         <div>
-             <Nav/>
-            {fetch('/api')}
+           
+           This is the Data component
         </div>
     )
 }

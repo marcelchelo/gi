@@ -21,8 +21,8 @@ app.use (cors());
   app.get('/api', function (req, res, next) {
     try {
       let dbName = sequelize.getDatabaseName();
-      console.log(dbName);
-      res.send(dbName);
+      console.log(dbName + " From backend /api route ");
+      res.send(dbName.toString);
     } catch (error) {
       console.log(error);
     }
