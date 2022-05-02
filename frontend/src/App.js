@@ -7,7 +7,7 @@ import  Data from './components/Data';
 import  About from './components/About';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import React from 'react';
-// import Data from './components/Data';
+import Blog from './components/Blog';
 
 
 function App() {
@@ -40,6 +40,7 @@ function App() {
 
       <Route path="/about" element={<About/>} ></Route>
       <Route path="/data" element={<Data/>} ></Route>
+      <Route path="/blog" element={<Blog/>} ></Route> 
       
 
       </Routes>
