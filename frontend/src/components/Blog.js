@@ -12,8 +12,6 @@ const Blog = () =>{
             <div>
                  <BlogTitle title="Running" date="5/2/2022"/>   
                  <BlogPost/>
-
-
             </div>
 
            
